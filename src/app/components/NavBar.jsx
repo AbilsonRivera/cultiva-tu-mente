@@ -8,14 +8,14 @@ function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <header className="w-full p-4">
+        <header className="w-full  sticky top-0 z-50">
 
             {/* Main Navbar */}
-            <nav className="bg-white  px-12 py-1 sm:px-12 md:px-12 md:py-0 ">
+            <nav className="bg-white px-12 py-1 sm:px-12 md:px-12 md:py-0 shadow-md">
                 <div className="mx-auto flex justify-between items-center">
                     <div className="flex items-center">
                         <Link href={'#'}>
-                            <img src="./logo.svg" className="object-scale-down w-24 sm:w-32 h-12" alt="Alcaldía de Neiva" />
+                            <img src="./logo.svg" className="object-scale-down w-24 sm:w-32 h-12 my-2" alt="Alcaldía de Neiva" />
                         </Link>
                     </div>
 
@@ -30,20 +30,19 @@ function NavBar() {
 
 
 
-                </div>                {/* Menu Responsive */}
-                {menuOpen && (
-                    <div className="flex flex-col text-white text-center rounded-sm pb-2 w-1/6 absolute right-16 bg-[#2A8892]">
+                </div>                {/* Menu Responsive */}                {menuOpen && (
+                    <div className="flex flex-col text-white text-center rounded-sm pb-2 px-6 md:px-0 md:w-1/6 absolute  right-5 bg-[#2A8892]">
                         <ul>
-                            <Link href={'/'} passHref>
+                            <Link href={'#fundadores'} passHref onClick={() => setMenuOpen(false)}>
                                 <li className="py-2  hover:scale-105">Fundadores</li>
                             </Link>
-                            <Link href={'/requestEscenary'} passHref>
+                            <Link href={'#podcast'} passHref onClick={() => setMenuOpen(false)}>
                                 <li className="py-2  hover:scale-105">Podcast</li>
                             </Link>
-                            <Link href={'/'} passHref>
+                            <Link href={'#beneficios'} passHref onClick={() => setMenuOpen(false)}>
                                 <li className="py-2  hover:scale-105">Beneficios</li>
                             </Link>
-                            <Link href={'/news'} passHref>
+                            <Link href={'#contactenos'} passHref onClick={() => setMenuOpen(false)}>
                                 <li className="py-2  hover:scale-105">Contáctanos</li>
                             </Link>
                         </ul>

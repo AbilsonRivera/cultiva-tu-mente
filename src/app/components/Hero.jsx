@@ -1,10 +1,35 @@
+"use client"
+import { useState } from 'react';
+import ContactModal from './ContactModal';
+import Link from 'next/link';
+
+
 
 const Hero = () => {
+   const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
     return (
-        <div className='h-[70vh] bg-[url(/hero.png)] bg-cover bg-center bg-no-repeat text-white flex flex-col gap-4 justify-center items-center'>
-            <p className='font-Poppins font-semibold text-shadow-lg  text-6xl '>Todos podemos hablar de salud mental</p>
-            <button className='bg-[#2A8892] font-Roboto text-lg font-medium rounded-full py-2 px-4 '>VINCÚLATE</button>
+        <div className='h-[70vh] bg-[url(/hero.png)] bg-cover bg-center bg-no-repeat  text-white flex flex-col gap-4 justify-center items-center'>
+            <p className='font-Poppins font-semibold text-shadow-lg mx-6 text-6xl '>Todos podemos hablar de salud mental</p>
+            <Link
+                href={"#contactenos"}
+                onClick={openModal}
+                className='bg-[#2A8892] px-5 py-3 text-white text-lg font-medium rounded-xl hover:bg-[#1e6670] transition-colors shadow-md'
+            >
+                VINCÚLATE
+            </Link>
+
+
         </div>
+
     )
 }
 

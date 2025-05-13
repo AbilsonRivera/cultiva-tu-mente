@@ -22,10 +22,10 @@ const Fundadores = () => {
     ];
     
     return (
-        <div className="py-10 px-4">
+        <div className="py-10 px-4" id='fundadores'>
             <h1 className="text-3xl font-Poppins font-bold text-center mb-8 text-[#2A8892]">Fundadores del podcast</h1>
             
-            <div className="flex flex-wrap justify-center gap-8">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                 {foundersData.map((founder) => (
                     <Card 
                         key={founder.id}

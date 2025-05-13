@@ -10,7 +10,7 @@ const Card = ({ image, name, welcomeText, description, socialHandle }) => {
     };
 
     return (
-        <div className="border border-[#2A8892] rounded-3xl max-w-lg w-1/4 overflow-hidden transition-all duration-300 relative">
+        <div className="border border-[#2A8892] rounded-3xl max-w-lg w-full md:w-1/2 lg:w-1/4 overflow-hidden transition-all duration-300 relative">
             <div className="py-6 px-4 flex flex-col items-center">
                     {/* Ícono de liderazgo en la esquina superior */}
                     <div className="absolute top-7 right-7 text-xl text-[#2A8892]">
