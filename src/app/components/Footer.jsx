@@ -3,7 +3,7 @@ import { FaFacebook } from "react-icons/fa";
 import { LuInstagram } from "react-icons/lu";
 
 
-const Hero = () => {
+const Footer = () => {
     return (
         <div className='h-[50vh] bg-[#2A8892] bg-cover bg-center bg-no-repeat text-white flex flex-col gap-4 justify-center items-center'>
             <img src="/whiteLogo.svg" width={"200px"} alt="" />
@@ -20,4 +20,4 @@ const Hero = () => {
     )
 }
 
-export default Hero
+export default Footer

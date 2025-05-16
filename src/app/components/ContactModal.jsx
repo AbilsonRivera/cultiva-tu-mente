@@ -20,15 +20,15 @@ const ContactModal = ({ isOpen, onClose }) => {
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitSuccess, setSubmitSuccess] = useState(false);
-    const [submitError, setSubmitError] = useState(null);
-
-    const handleChange = (e) => {
+    const [submitError, setSubmitError] = useState(null);    const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prevState => ({
             ...prevState,
             [name]: value
         }));
-    };    const handleSubmit = async (e) => {
+    };
+    
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
 
@@ -103,7 +103,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A8892]"
+                                    className="w-full p-2 text-[#2A8892] border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A8892]"
                                     required
                                 />
                             </div>
@@ -116,17 +116,18 @@ const ContactModal = ({ isOpen, onClose }) => {
                                     name="phone"
                                     value={formData.phone}
                                     onChange={handleChange}
-                                    className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A8892]"
-                                    required
+                                    className="w-full text-[#2A8892] p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A8892]"                                    required
                                 />
-                            </div>                            <div className="mb-6">
+                            </div>
+                            
+                            <div className="mb-6">
                                 <label htmlFor="municipality" className="block text-gray-700 mb-1">Municipio</label>
                                 <select
                                     id="municipality"
                                     name="municipality"
                                     value={formData.municipality}
                                     onChange={handleChange}
-                                    className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A8892] bg-white"
+                                    className="w-full p-2 border text-[#2A8892] border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A8892] bg-white"
                                     required
                                 >
                                     <option value="">Selecciona un municipio</option>

@@ -1,12 +1,9 @@
 "use client"
 import { useState } from 'react';
 import ContactModal from './ContactModal';
-import Link from 'next/link';
-
-
 
 const Hero = () => {
-   const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => {
         setIsModalOpen(true);
@@ -14,7 +11,9 @@ const Hero = () => {
 
     const closeModal = () => {
         setIsModalOpen(false);
-    };    return (
+    };
+    
+    return (
         <div
             id='home'
             className='h-[70vh] bg-[url(/hero.png)] bg-cover bg-center bg-no-repeat text-white flex flex-col gap-4 justify-center items-center'>
