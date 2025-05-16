@@ -17,7 +17,9 @@ const Hero = () => {
     };
 
     return (
-        <div className='h-[70vh] bg-[url(/hero.png)] bg-cover bg-center bg-no-repeat  text-white flex flex-col gap-4 justify-center items-center'>
+        <div
+            id='home'
+            className='h-[70vh] bg-[url(/hero.png)] bg-cover bg-center bg-no-repeat  text-white flex flex-col gap-4 justify-center items-center'>
             <p className='font-Poppins font-semibold text-shadow-lg mx-6 text-6xl '>Todos podemos hablar de salud mental</p>
             <Link
                 href={"#contactenos"}

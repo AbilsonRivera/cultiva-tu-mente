@@ -22,16 +22,38 @@ function NavBar() {
                     {/* Hamburger Menu */}
                     <button
                         aria-label='hamburgerMenu'
-                        className=" text-[#2A8892] font-bold focus:outline-none w-full justify-end flex"
+                        className=" text-[#2A8892] font-bold focus:outline-none w-full justify-end flex md:hidden"
                         onClick={() => setMenuOpen(!menuOpen)}
                     >
                         <GiHamburgerMenu />
                     </button>
 
+                    {/* Menu */}
+                    <ul
+                        className={`${menuOpen ? 'hidden' : 'hidden'} md:flex gap-2 md:gap-8 text-center items-center md:text-sm lg:text-base absolute md:static font-semibold text-[#2A8892] bg-white w-full md:w-auto top-full left-0 md:top-auto md:left-auto md:bg-transparent shadow md:shadow-none`}
+                    >
+                        <Link href={'/'} passHref>
+                            <li className="py-2 px-4 md:px-2 hover:text-gray-500 lg:py-0">Inicio</li>
+                        </Link>
+                        <Link href={'/requestEscenary'} passHref>
+                            <li className="py-2 px-4 md:px-2 hover:text-gray-500 lg:py-0">Fundadores</li>
+                        </Link>
+                        <Link href={'/'} passHref>
+                            <li className="py-2 px-4 md:px-2 hover:text-gray-500 lg:py-0">Podcast</li>
+                        </Link>
+                        <Link href={'/news'} passHref>
+                            <li className="py-2 px-4 md:px-2 hover:text-gray-500 lg:py-0">Beneficios</li>
+                        </Link>
+                        <Link href={'/news'} passHref>
+                            <li className="py-2 px-4 md:px-2 hover:text-gray-500 lg:py-0">Contáctanos</li>
+                        </Link>
+                    </ul>
+
+
 
 
                 </div>                {/* Menu Responsive */}                {menuOpen && (
-                    <div className="flex flex-col text-white text-center rounded-sm pb-2 px-6 md:px-0 md:w-1/6 absolute  right-5 bg-[#2A8892]">
+                    <div className="flex flex-col md:hidden text-white text-center rounded-sm pb-2 px-6 md:px-0 md:w-1/6 absolute  right-5 bg-[#2A8892]">
                         <ul>
                             <Link href={'#fundadores'} passHref onClick={() => setMenuOpen(false)}>
                                 <li className="py-2  hover:scale-105">Fundadores</li>
@@ -54,3 +76,5 @@ function NavBar() {
 }
 
 export default NavBar;
+
+
