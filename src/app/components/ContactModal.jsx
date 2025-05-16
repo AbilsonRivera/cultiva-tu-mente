@@ -100,6 +100,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                                 <input
                                     type="text"
                                     id="name"
+                                    placeholder='Ingresa tu nombre'
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
@@ -113,6 +114,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                                 <input
                                     type="tel"
                                     id="phone"
+                                    placeholder='+57 3*********'
                                     name="phone"
                                     value={formData.phone}
                                     onChange={handleChange}
