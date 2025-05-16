@@ -35,16 +35,16 @@ function NavBar() {
                         <Link href={'/'} passHref>
                             <li className="py-2 px-4 md:px-2 hover:text-gray-500 lg:py-0">Inicio</li>
                         </Link>
-                        <Link href={'/requestEscenary'} passHref>
+                        <Link href={'#fundadores'} passHref>
                             <li className="py-2 px-4 md:px-2 hover:text-gray-500 lg:py-0">Fundadores</li>
                         </Link>
-                        <Link href={'/'} passHref>
+                        <Link href={'#podcast'} passHref>
                             <li className="py-2 px-4 md:px-2 hover:text-gray-500 lg:py-0">Podcast</li>
                         </Link>
-                        <Link href={'/news'} passHref>
+                        <Link href={'#beneficios'} passHref>
                             <li className="py-2 px-4 md:px-2 hover:text-gray-500 lg:py-0">Beneficios</li>
                         </Link>
-                        <Link href={'/news'} passHref>
+                        <Link href={'#contactenos'} passHref>
                             <li className="py-2 px-4 md:px-2 hover:text-gray-500 lg:py-0">Contáctanos</li>
                         </Link>
                     </ul>

@@ -2,6 +2,16 @@
 import React, { useState } from 'react';
 import { IoClose } from 'react-icons/io5';
 
+// Lista de municipios del Huila
+const huilaMunicipalities = [
+    "Neiva", "Acevedo", "Agrado", "Aipe", "Algeciras", "Altamira", "Baraya", 
+    "Campoalegre", "Colombia", "Elías", "Garzón", "Gigante", "Guadalupe", 
+    "Hobo", "Íquira", "Isnos", "La Argentina", "La Plata", "Nátaga", 
+    "Oporapa", "Paicol", "Palermo", "Palestina", "Pital", "Pitalito", 
+    "Rivera", "Saladoblanco", "San Agustín", "Santa María", "Suaza", 
+    "Tarqui", "Tello", "Teruel", "Tesalia", "Timaná", "Villavieja", "Yaguará"
+];
+
 const ContactModal = ({ isOpen, onClose }) => {
     const [formData, setFormData] = useState({
         name: '',
@@ -109,19 +119,23 @@ const ContactModal = ({ isOpen, onClose }) => {
                                     className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A8892]"
                                     required
                                 />
-                            </div>
-
-                            <div className="mb-6">
+                            </div>                            <div className="mb-6">
                                 <label htmlFor="municipality" className="block text-gray-700 mb-1">Municipio</label>
-                                <input
-                                    type="text"
+                                <select
                                     id="municipality"
                                     name="municipality"
                                     value={formData.municipality}
                                     onChange={handleChange}
-                                    className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A8892]"
+                                    className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A8892] bg-white"
                                     required
-                                />
+                                >
+                                    <option value="">Selecciona un municipio</option>
+                                    {huilaMunicipalities.map((municipality) => (
+                                        <option key={municipality} value={municipality}>
+                                            {municipality}
+                                        </option>
+                                    ))}
+                                </select>
                             </div>
 
                             <button
