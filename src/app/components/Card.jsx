@@ -1,8 +1,8 @@
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaYoutube } from "react-icons/fa";
 import React, { useState } from 'react';
 import { FaHandFist } from "react-icons/fa6";
 
-const Card = ({ image, name, welcomeText, description, socialHandle }) => {
+const Card = ({ image, name, welcomeText, description, socialHandle, socialLink }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const toggleCard = () => {
@@ -52,16 +52,23 @@ const Card = ({ image, name, welcomeText, description, socialHandle }) => {
                     {isExpanded && (
                         <div className="mt-4 animate-fadeIn">
                             {socialHandle && (
-                                <div className="flex gap-2 items-center mb-2">
-                                    <div className="p-1 bg-black rounded-full">
-                                        <FaInstagram className=" text-white bg-black" />
-                                    </div>
-                                    <span className="inline-flex items-center">
+                                <div className="flex gap-2 items-center mb-2">                                    <div className="p-1 bg-black rounded-full">
+                                        {socialLink.includes('instagram.com') ? (
+                                            <FaInstagram className="text-white bg-black" />
+                                        ) : socialLink.includes('youtu') ? (
+                                            <FaYoutube className="text-white bg-black" />
+                                        ) : (
+                                            <FaInstagram className="text-white bg-black" />
+                                        )}
+                                    </div><a href={socialLink} 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       className="inline-flex items-center hover:text-[#2A8892] transition-colors">
                                         {socialHandle}
-                                    </span>
+                                    </a>
                                 </div>
                             )}
-                            <p className="text-sm leading-relaxed line-clamp-3">{description}</p>
+                            <p className="text-sm leading-relaxed">{description}</p>
                         </div>
                     )}
 

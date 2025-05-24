@@ -5,19 +5,30 @@ const Fundadores = () => {
     const foundersData = [
         {
             id: 1,
-            image: '/fundador1.png',
-            name: 'Ana María Cortés',
+            image: '/LEYDY_ZAPATA_SIN_FONDO.png',
+            name: 'Leydy Zapata',
             welcomeText: 'Bienvenidos',
-            description: 'Psicóloga con especialidad en salud mental comunitaria. Fundadora del proyecto Cultiva Tu Mente con más de 10 años de experiencia en el trabajo con comunidades vulnerables.',
-            socialHandle: '@anamaria.cortes'
+            description: 'Psicóloga, Mg en Salud Mental Comunitaria de la Universidad El Bosque. Mg en Neuropsicología con experiencia clínica con niños, niñas y adolescentes con discapacidad, trabajo comunitario con población vulnerable y en salud pública.',
+            socialHandle: '@vanezalo05',
+            socialLink: 'https://instagram.com/vanezalo05'
         },
         {
             id: 2,
-            image: '/fundador2.png',
-            name: 'Carlos Mendoza',
+            image: '/YAMID_SANABRIA_FOTO_SIN FONDO.png',
+            name: 'Yamid Sanabria',
             welcomeText: 'Conoce nuestro trabajo',
-            description: 'Trabajador social especializado en intervención familiar. Cofundador del proyecto y coordinador de las iniciativas de educación en salud mental para adolescentes.',
-            socialHandle: '@carlos.mendoza'
+            description: 'Politólogo, especialista, exconcejal de Neiva, Fundador de la Organización Jóvenes Adelante, creador de la política pública de salud mental de Neiva.',
+            socialHandle: '@CultivaTuMente',
+            socialLink: 'https://youtu.be/l1dfL_WIuWE?si=2GLXMCUNFV651hm4'
+        },
+        {
+            id: 3,
+            image: '/IMG_7088-sin fondo.png',
+            name: 'Nathaly Salas',
+            welcomeText: 'Beinvenidos',
+            description: 'Psicóloga, magíster en salud mental comunitaria y feminista. Con experiencia en coordinación de programas de salud mental para Instituciones Prestadoras de Salud (IPS) y en psicoterapia individual, familiar y grupal desde un enfoque humanista y de género.',
+            socialHandle: '@nathsalasc',
+            socialLink: 'https://www.instagram.com/nathsalasc?igsh=MXE1MTRjMjR5OGYxdw=='
         },
     ];
     
@@ -29,11 +40,11 @@ const Fundadores = () => {
                 {foundersData.map((founder) => (
                     <Card 
                         key={founder.id}
-                        image={founder.image}
-                        name={founder.name}
+                        image={founder.image}                        name={founder.name}
                         welcomeText={founder.welcomeText}
                         description={founder.description}
                         socialHandle={founder.socialHandle}
+                        socialLink={founder.socialLink}
                     />
                 ))}
             </div>

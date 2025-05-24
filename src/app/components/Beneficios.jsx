@@ -2,9 +2,11 @@ import React from 'react'
 
 const Beneficios = () => {
         const benefitsList = [
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam",
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam",
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam"
+        "Descuentos exclusivos con nuestro profesionales en el campo de la psicóloga y psiquiatra para iniciar procesos de atención.",
+        "Talleres gratuitos sobre inteligencia emocional y habilidades blandas para una mejor calidad de vida.",
+        "Tips sobre cómo tratar momentos de crisis de ansiedad, estrés y depresión con nuestra línea exclusiva de WhatsApp para promotores.",
+        "Material didáctico para replicar información sobre salud mental con redes familiares y amigos que requieran apoyo.",
+        "Ser parte de una gran red de apoyo para romper barreras sobre la salud mental en el Huila."
     ];
 
     return (
