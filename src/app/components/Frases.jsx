@@ -8,53 +8,43 @@ const Frases = () => {
     const frases = [
         {
             id: 1,
-            text: "La salud mental es fundamental para nuestro bienestar general y nuestra capacidad de disfrutar de la vida.",
-            author: "OMS"
+            text: "Cuidar tu salud mental también es una forma de amor propio."
         },
         {
             id: 2,
-            text: "El primer paso para buscar ayuda es reconocer que la necesitas.",
-            author: "Anónimo"
+            text: "Está bien descansar. No tienes que ser productivo todo el tiempo para valer"
         },
         {
             id: 3,
-            text: "No hay salud sin salud mental.",
-            author: "Organización Mundial de la Salud"
+            text: "Tu mente también necesita pausas, no solo tu cuerpo"
         },
         {
             id: 4,
-            text: "Tu valor no disminuye por la batalla que estás enfrentando.",
-            author: "Anónimo"
+            text: "Está bien, no estar bien. Sentir es parte de ser humano."
         },
         {
             id: 5,
-            text: "Hablar de tus sentimientos no es una señal de debilidad; es parte de tu camino hacia la recuperación.",
-            author: "Psicólogo John Grohol"
+            text: "No minimices tus emociones. Lo que sientes importa."
         },
         {
             id: 6,
-            text: "La salud mental no es un destino, sino un proceso. Se trata del cómo llegas, no de a dónde llegas.",
-            author: "Noam Shpancer"
+            text: "Permítete sentir sin juzgarte. Tu dolor también merece compasión."
         },
         {
             id: 7,
-            text: "Mereces un espacio para ser escuchado.",
-            author: "Anónimo"
+            text: "No estás solo. Hablar es un acto de valentía."
         },
         {
             id: 8,
-            text: "Tu historia puede ser el capítulo que cambie la vida de alguien más.",
-            author: "Anónimo"
+            text: "Pedir ayuda no es debilidad, es un acto de fortaleza."
         },
         {
             id: 9,
-            text: "La salud mental es parte integral de la salud; tanto es así que no hay salud sin salud mental.",
-            author: "Dr. Brock Chisholm"
+            text: "La salud mental es parte integral de la salud; tanto es así que no hay salud sin salud mental."
         },
         {
             id: 10,
-            text: "Cuidar de tu mente es tan importante como cuidar de tu cuerpo.",
-            author: "Anónimo"
+            text: "Cuidar de tu mente es tan importante como cuidar de tu cuerpo."
         }
     ];
 
@@ -96,11 +86,8 @@ const Frases = () => {
                                 <FaQuoteLeft size={30} />
                                 <FaQuoteRight size={30} />
                             </div>
-                            <p className="text-gray-800 flex-grow text-lg italic">
+                            <p className="text-gray-800 text-lg italic text-center flex-grow flex items-center justify-center">
                                 "{frase.text}"
-                            </p>
-                            <p className="text-[#2A8892] font-bold text-right mt-4">
-                                - {frase.author}
                             </p>
                         </div>
                     </div>

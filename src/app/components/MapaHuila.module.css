@@ -1,0 +1,126 @@
+.mapaContainer {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.mapaContainer svg {
+  width: 100%;
+  height: auto;
+}
+.responsiveMap {
+  width: 300px;
+  height: 300px;
+}
+
+@media (min-width: 640px) {
+  .responsiveMap {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .responsiveMap {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.tooltip {
+  background-color: rgba(217, 217, 217, 0.95) !important;
+  border-radius: 12px;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  font-family: Arial, sans-serif;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .tooltip {
+    position: fixed !important;
+    width: 85vw;
+    max-width: 350px;
+    max-height: 80vh;
+    overflow-y: auto;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 20px !important;
+    top: auto !important;
+    padding: 15px;
+    background-color: rgba(217, 217, 217, 0.98) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  .tooltipImage {
+    height: 120px;
+    margin-bottom: 10px;
+  }
+
+  .tooltipTitle {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+
+  .tooltipDescription {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+}
+
+.tooltipImage {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tooltipTitle {
+  margin: 0 0 8px 0;
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  text-align: center;
+  width: 100%;
+}
+
+.tooltipDescription {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #4a4a4a;
+  text-align: justify;
+}
+
+/* Media query para pantallas pequeñas (celulares) */
+@media (max-width: 480px) {
+  .tooltip {
+    width: 90vw; /* ancho casi completo del móvil */
+    padding: 8px;
+  }
+
+  .tooltipImage {
+    height: 100px; /* imagen más baja */
+    margin-bottom: 8px;
+  }
+
+  .tooltipTitle {
+    font-size: 1.5rem; /* tamaño de título más pequeño */
+    margin-bottom: 6px;
+  }
+
+  .tooltipDescription {
+    font-size: 0.8rem; /* texto un poco más pequeño */
+    line-height: 1.3;
+  }
+}
+
