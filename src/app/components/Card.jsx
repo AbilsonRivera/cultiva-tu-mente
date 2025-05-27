@@ -1,13 +1,15 @@
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaYoutube } from "react-icons/fa";
 import React, { useState } from 'react';
 import { FaHandFist } from "react-icons/fa6";
 
-const Card = ({ image, name, welcomeText, description, socialHandle }) => {
+const Card = ({ image, name, welcomeText, description, socialHandle, socialLink }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const toggleCard = () => {
         setIsExpanded(!isExpanded);
     };
+
+    const isYoutubeLink = socialLink?.includes('youtu');
 
     return (
         <div className="border border-[#2A8892] rounded-3xl max-w-lg w-full md:w-1/2 lg:w-1/4 overflow-hidden transition-all duration-300 relative">
@@ -50,18 +52,26 @@ const Card = ({ image, name, welcomeText, description, socialHandle }) => {
                 </div>
                 {/* Contenido expandible */}
                     {isExpanded && (
-                        <div className="mt-4 animate-fadeIn">
-                            {socialHandle && (
-                                <div className="flex gap-2 items-center mb-2">
+                        <div className="mt-4 animate-fadeIn">                            {socialHandle && (
+                                <a 
+                                    href={socialLink} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="flex gap-2 items-center mb-2 hover:opacity-80 transition-opacity"
+                                >
                                     <div className="p-1 bg-black rounded-full">
-                                        <FaInstagram className=" text-white bg-black" />
+                                        {isYoutubeLink ? (
+                                            <FaYoutube className="text-white bg-black" />
+                                        ) : (
+                                            <FaInstagram className="text-white bg-black" />
+                                        )}
                                     </div>
-                                    <span className="inline-flex items-center">
+                                    <span className="inline-flex items-center hover:underline">
                                         {socialHandle}
                                     </span>
-                                </div>
+                                </a>
                             )}
-                            <p className="text-sm leading-relaxed line-clamp-3">{description}</p>
+                            <p className="text-sm leading-relaxed mt-2">{description}</p>
                         </div>
                     )}
 
