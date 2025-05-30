@@ -27,19 +27,25 @@ const ContactModal = ({ isOpen, onClose }) => {
             [name]: value
         }));
     };
-    
-    const handleSubmit = async (e) => {
+      const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
 
         try {
-            // Mostramos los datos en la consola como solicitado
-            console.log('Datos del formulario:', formData);
-            
-            // Simulamos un breve tiempo de procesamiento
-            await new Promise(resolve => setTimeout(resolve, 1000));
+            const response = await fetch('/api/contacts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
 
-            // Marcamos como éxito
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Error al enviar el formulario');
+            }
+
             setSubmitSuccess(true);
             
             // Reiniciamos el formulario
